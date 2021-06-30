@@ -1,0 +1,32 @@
+import random
+
+decissions = ["schäre", "stein", "papier"]
+
+bot = random.randint(0,2)
+
+user_Input = input("Schäre, Stein oder Papier? ")
+user_Input.lower()
+
+print("Deine getroffene Auswahl: "+user_Input)
+print("Der Computer wählte "+decissions[bot])
+
+if user_Input == decissions[bot]:
+    print("Unentscheiden")
+else:
+    if user_Input == 'stein':
+        if decissions[bot] == 'schäre':
+            print("Stein gewinnt")
+        else:
+            print("Papier gewinnt!")
+    elif user_Input == 'schäre':
+        if decissions[bot] == 'papier':
+            print("Schäre gewinnt!")
+        else:
+            print("Stein gewinnt!")
+    elif user_Input == 'papier':
+        if decissions[bot] == 'stein':
+            print("Papier gewinnt!")
+        else:
+            print("Schäre gewinnt!")
+    else:
+        print("Ungültige eingabe")
